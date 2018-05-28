@@ -6,6 +6,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyARyjqLBRR16AJ8hoH972qHdmA1YfqPo0o",
+    authDomain: "bij-33af2.firebaseapp.com",
+    databaseURL: "https://bij-33af2.firebaseio.com",
+    projectId: "bij-33af2",
+    storageBucket: "bij-33af2.appspot.com",
+    messagingSenderId: "441229255469"
+  };
+  firebase.initializeApp(config);
+
 @Component({
   templateUrl: 'app.html'
 })
