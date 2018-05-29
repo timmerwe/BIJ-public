@@ -16,6 +16,8 @@ import { Signup } from '../signup/signup';
  * on Ionic pages and navigation.
  */
 
+
+
 @Component({
     selector: 'page-login',
     templateUrl: 'login.html',
@@ -35,7 +37,7 @@ export class Login {
         });
 
     }
-
+    
     loginUser(): void {
         if (!this.loginForm.valid) {
             console.log(this.loginForm.value);
@@ -63,7 +65,7 @@ export class Login {
             this.loading.present();
         }
     }
-
+    
     goToSignup(): void {
         this.nav.push(Signup);
     }
@@ -71,4 +73,5 @@ export class Login {
     goToResetPassword(): void {
         this.nav.push(ResetPassword);
     }
+
 }
