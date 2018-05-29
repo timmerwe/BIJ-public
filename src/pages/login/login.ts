@@ -43,6 +43,8 @@ export class Login {
             this.authData.loginUser(this.loginForm.value.email, this.loginForm.value.password).then(authData => {
                 this.loading.dismiss().then(() => {
                     this.nav.setRoot(HomePage);
+
+                    if()
                 });
             }, error => {
                 this.loading.dismiss().then(() => {

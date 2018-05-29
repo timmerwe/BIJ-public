@@ -32,7 +32,8 @@ export class AuthData {
          // });
         firebase.database().ref('/userProfile').child(newUser.uid).set({
             firstName: "anonymous",
-             email: email
+             email: email,
+             userlevel: "2"
       });
     });
   }

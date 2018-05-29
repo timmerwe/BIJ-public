@@ -19,6 +19,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthData } from '../providers/auth-data';
 
 
+
 @NgModule({
   declarations: [
     MyApp,

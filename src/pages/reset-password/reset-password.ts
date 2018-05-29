@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthData } from '../../providers/auth-data';
 import { EmailValidator } from '../../validators/email';
+import { Login } from '../login/login';
 /**
  * Generated class for the ResetPassword page.
  *
@@ -71,4 +72,9 @@ export class ResetPassword {
             });
         }
     }
+    goToLogin(): void {
+        this.nav.push(Login);
+    }
 }
+
+

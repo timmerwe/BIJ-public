@@ -1,3 +1,33 @@
 page-home {
+    #nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        margin: 25px 60px;
+        
+    }
+    
+    #nav li {
+        float: left;
+        padding: 10px;
+        
+    }
+    
+    #nav li a {
+        display: block;
+        color: rgb(129, 129, 129);
+        font-size: 2em;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    #nav li a:hover {
+        
+    }
 
+    .active{
+        color: #35e0cc;
+    }
 }

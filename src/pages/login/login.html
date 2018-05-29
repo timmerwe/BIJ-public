@@ -7,7 +7,7 @@
   <ion-content id="login" >
   
        <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
-          <h1 id="title">INLOG</h1>         
+          <h1 id="title">INLOGGEN</h1>         
         <!--divs-->
               <div class="row responsive-md">
                   <div class="col col-50 col-offset-25">
@@ -30,6 +30,10 @@
       <button ion-button block clear (click)="goToResetPassword()" id="wachtwoord-vergeten">
         Wachtwoord vergeten? Klik hier!
       </button>
+
+      <button ion-button block type="submit" (click)="goToSignup()">
+          singup
+        </button>
 
   
      </div>

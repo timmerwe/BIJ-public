@@ -1,11 +1,13 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
+
 
 <ion-content padding>
-   you are authenticated
+
+     <ul id="nav">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">Gebruikers</a></li>
+        <li><a href="#contact">Kalender</a></li>
+      </ul>
+
       <button ion-button icon-only (click)="logOut()"> log out
         <ion-icon name="log-out"></ion-icon>
       </button>
