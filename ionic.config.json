@@ -1,8 +1,6 @@
 {
-  "name": "BIJ!",
-  "app_id": "ceefc034",
-  "type": "ionic-angular",
-  "integrations": {
-    "cordova": {}
-  }
+  "name": "auth",
+  "app_id": "",
+  "integrations": {},
+  "type": "ionic-angular"
 }

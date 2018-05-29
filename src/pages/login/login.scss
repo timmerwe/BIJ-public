@@ -1,0 +1,52 @@
+page-login {
+    #title{
+        width: 140px;
+        margin: 100px auto 10px auto;
+        font-size: 3em;
+        font-family: Sans-serif;
+        color: rgb(102, 154, 163);
+    }
+
+    #password{
+        width: 38%;
+        height: 60px;
+        margin: 20px auto;
+        border: 1px solid #444;
+        transition: 1s;
+        padding: 0;
+    }
+
+    #email{
+        width: 38%; 
+        height: 60px;
+        margin: 20px auto;
+        border: 1px solid #444;
+        transition: 1s;
+        padding: 0;
+    }
+
+    #wachtwoord-vergeten{
+        width: 140px;
+        margin: 10px 100px 10px 200px;
+        font-family: Sans-serif;
+        color: rgb(102, 154, 163);
+    }
+
+    input{
+        width: 520px; 
+        height: 70px; 
+    }
+
+    @media (max-width:50em){
+        #email{
+            width: 70%;
+            transition: 1s;
+        }
+
+        #password{
+            width: 70%;
+            transition: 1s;
+        }
+    }
+
+}
