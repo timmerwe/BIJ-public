@@ -16,6 +16,9 @@ export class AuthData {
     
   }
 
+  
+  
+
   /**
    * [signupUser description]
    * This function will take the user's email and password and create a new account on the Firebase app, once it does
@@ -38,6 +41,8 @@ export class AuthData {
     });
   }
 
+
+
   /**
    * [resetPassword description]
    * This function will take the user's email address and send a password reset link, then Firebase will handle the
@@ -55,5 +60,14 @@ export class AuthData {
   logoutUser(): firebase.Promise<any> {
     return firebase.auth().signOut();
   }
+
+  userlevel(email: string): firebase.Promise<any> {
+    var userId = firebase.auth().currentUser.uid;
+return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
+  var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+  // ...
+});
+};
+  
 
 }
