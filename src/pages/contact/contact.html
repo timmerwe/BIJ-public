@@ -1,17 +1,27 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+<ion-content padding>
+    <div id="nav">
+        <button id="notSelected" (click)="goToHome()">
+            Home
+          </button>
+          <button  id="selected" >
+            Gebruikers
+          </button>
+          <button  id="notSelected" (click)="goToKalender()">
+            Kalender
+          </button>
+        </div>
+
+        <button id="algemeen" onclick="hoi1()">
+            Algemeen
+          </button>
+          <button id="overzicht" onclick="hoi2()">
+              Overzicht
+            </button>
+      <div id="main-info">
+          <p>Uitleg over hoe leerkrachten en ouders/verzorgers de APP kunnen downloaden en gebruiken. Dit willen we doen d.m.v. 2 codes. 1 t.b.v. leerkrachten (interne gebruikers) en 1 t.b.v. ouders/verzorgers (externe gebruikers)</p>
+      </div>
+
 </ion-content>
+
+

@@ -13,9 +13,6 @@ import { ContactPage } from '../contact/contact';
 })
 export class HomePage {
 
-    tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
 
     constructor(public navCtrl: NavController, public authData: AuthData) {
 
@@ -25,6 +22,14 @@ export class HomePage {
           this.navCtrl.setRoot(Login);
       });
   }
+
+  goToGebruikers(): void {
+    this.navCtrl.setRoot(ContactPage);
+}
+
+goToKalender(): void {
+  this.navCtrl.setRoot(AboutPage);
+}
 
   
 }

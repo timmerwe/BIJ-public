@@ -1,47 +1,45 @@
 page-home {
     #nav {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
         overflow: hidden;
-        margin: 25px 60px;
+        margin: 35px 60px;
         
     }
     
-    #nav li {
-        float: left;
+    #nav button {
         padding: 10px;
-        
-    }
-    
-    #nav li a {
-        display: block;
-        color: rgb(129, 129, 129);
         font-size: 2em;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-    
-    #nav li a:hover {
+        
+        margin: 10px;
         
     }
 
-    .active{
-        color: #35e0cc;
+    #notSelected{
+        color: rgb(153, 153, 153);
     }
+
+    #selected{
+        color: #279b8d;
+    }
+    
+    
+
     #homepage{
-        border: 2px solid;
-        border-color: #000;
-        margin-right: 12%;
-        margin-left: 12%;
+        border: 2px solid #000;
+        margin: -2.5px 12%;
         padding: 2%;
         padding-bottom: 200px;
     }
+    
     #welkom{
-        margin-left: 152px;
+        width: 170px;
+        position: relative;
+        height: 50px;
+        margin-left: 12%;
+        border: #000 solid 2px;
         font-size: 2.2em;
-        color: #35e0cc;
+        color: #279b8d;
         font-style: italic;
+        border-bottom: rgb(240, 239, 239) solid 2px;
     }
+
 }
