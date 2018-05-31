@@ -35,10 +35,13 @@ page-contact {
         position: relative;
         height: 50px;
         margin-left: -10px;
-        border: #000 solid 2px;
-        font-size: 2.2em;
+        border-top: #000 solid 2px;
+        border-left: #000 solid 2px;
+        border-right: #000 solid 2px;
+        font-size: 2em;
         color: #279b8d;
         font-style: italic;
+
     }
 
     #algemeen{
@@ -46,10 +49,20 @@ page-contact {
         position: relative;
         height: 50px;
         margin-left: 12%;
-        border: #000 solid 2px;
-        font-size: 2.2em;
+        border-top: #000 solid 2px;
+        border-left: #000 solid 2px;
+        border-right: #000 solid 2px;
+        font-size: 2em;
         color: #279b8d;
         font-style: italic;
+        
+    }
+
+    .border-bottom{
         border-bottom: rgb(240, 239, 239) solid 2px;
+    }
+
+    .noBorder-bottom{
+        border-bottom: #000 solid 2px;
     }
 }
