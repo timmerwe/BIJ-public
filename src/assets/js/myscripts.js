@@ -9,3 +9,12 @@ function changeInfo() {
     document.getElementById("overzicht").className = "border-bottom";
     document.getElementById("algemeen").className = "noBorder-bottom";
   }
+  
+  function getUserlevel(){
+    var userId = firebase.auth().currentUser.uid;
+    return firebase.database().ref('/userProfile/' + userId).once('value').then(function(snapshot) {
+      var username = (snapshot.val() && snapshot.val().userlevel) || 'Anonymous';
+      console.log(username);
+      console.log("hoi");
+    });
+  };

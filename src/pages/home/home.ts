@@ -13,10 +13,13 @@ import { ContactPage } from '../contact/contact';
 })
 export class HomePage {
 
+  
 
     constructor(public navCtrl: NavController, public authData: AuthData) {
 
   }
+
+  
   logOut() {
       this.authData.logoutUser().then(() => {
           this.navCtrl.setRoot(Login);
@@ -31,7 +34,10 @@ goToKalender(): void {
   this.navCtrl.setRoot(AboutPage);
 }
 
+
   
 }
+
+
 
 
