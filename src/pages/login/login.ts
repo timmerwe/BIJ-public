@@ -37,6 +37,7 @@ export class Login {
         });
 
     }
+
     
     loginUser(): void {
         if (!this.loginForm.valid) {
@@ -73,5 +74,7 @@ export class Login {
     goToResetPassword(): void {
         this.nav.push(ResetPassword);
     }
+
+    
 
 }

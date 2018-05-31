@@ -7,19 +7,22 @@ import * as firebase from 'firebase'
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 
+
+window.onload(getUserlevel());
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage {
 
+export class HomePage {
   
 
     constructor(public navCtrl: NavController, public authData: AuthData) {
-
   }
 
-  
+
+
   logOut() {
       this.authData.logoutUser().then(() => {
           this.navCtrl.setRoot(Login);
@@ -34,9 +37,17 @@ goToKalender(): void {
   this.navCtrl.setRoot(AboutPage);
 }
 
+ getUserlevel() {
+  var userId = firebase.auth().currentUser.uid;
+   firebase.database().ref('/userProfile/' + userId).once('value').then(function(snapshot) {
+    var userlevel = (snapshot.val() && snapshot.val().userlevel) || 'Anonymous';
+    console.log(userlevel);
+  })
+}
 
   
 }
+
 
 
 

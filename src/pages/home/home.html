@@ -1,6 +1,6 @@
 
 
-<ion-content padding>
+<ion-content padding (ready)="getUserlevel()">
     <div id="nav">
     <button id="selected" >
         Home
@@ -12,7 +12,7 @@
         Kalender
       </button>
 
-      <button  id="notSelected" (click)="getUserlevel()">
+      <button  id="notSelected" (click)="logOut()">
           log uit
         </button>
     </div>
