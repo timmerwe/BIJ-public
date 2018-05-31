@@ -8,7 +8,6 @@ import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 
 
-window.onload(getUserlevel());
 
 @Component({
   selector: 'page-home',
