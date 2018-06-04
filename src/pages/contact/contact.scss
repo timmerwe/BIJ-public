@@ -1,11 +1,39 @@
 page-contact {
 
+    #title{
+        color: #279b8d;
+        position: absolute;
+        left: 100px;
+        top: 5px;
+    }
+
+    #menu-title{
+        color: #279b8d;
+        position: absolute;
+        left: 90px;
+        top: 47px;
+    }
+
+    #main{
+        padding: 30px;
+    }
+
+    #notSelected{
+        color: rgb(153, 153, 153);
+    }
+
+    #selected{
+        color: #279b8d;
+    }
+    
+
     a
         {
           text-decoration: none;
           color: #232323;
           
           transition: color 0.3s ease;
+          cursor: pointer;
         }
         
         
@@ -88,8 +116,8 @@ page-contact {
         #menu
         {
           position: absolute;
-          width: 20px;
-          margin: -100px 0 0 -50px;
+          width: 200px;
+          margin: -100px 0 0 -45px;
           padding: 50px;
           padding-top: 125px;
           height: 1700px;
@@ -108,73 +136,22 @@ page-contact {
         #menu li
         {
           padding: 10px 0;
-          font-size: 22px;
-          display: inline-block;
+          font-size: 27px;
           margin-left: -32px;
+          margin-top: 10px;
+        }
+
+        #menu ul li{
+            list-style-type: none;
+            margin-bottom: -20px;
+            font-size: 18px;
+            margin-left: -5px;
         }
         
         #menuToggle input:checked ~ ul
         {
           transform: none;
         }
-
-    #notSelected{
-        color: rgb(153, 153, 153);
-    }
-
-    #selected{
-        color: #279b8d;
-    }
-    
-    
-
-    #main-info{
-        border: 2px solid #000;
-        margin: -2px 12%;
-        padding: 2%;
-        padding-bottom: 200px;
-    }
-
-    #overzicht{
-        width: 160px;
-        position: relative;
-        height: 50px;
-        margin-left: -10px;
-        border-top: #000 solid 2px;
-        border-left: #000 solid 2px;
-        border-right: #000 solid 2px;
-        font-size: 2em;
-        color: #279b8d;
-        font-style: italic;
-
-    }
-
-    #algemeen{
-        width: 170px;
-        position: relative;
-        height: 50px;
-        margin-left: 12%;
-        border-top: #000 solid 2px;
-        border-left: #000 solid 2px;
-        border-right: #000 solid 2px;
-        font-size: 2em;
-        color: #279b8d;
-        font-style: italic;
-        
-    }
-
-
-    .border-bottom{
-        border-bottom: rgb(240, 239, 239) solid 2px;
-    }
-
-    .noBorder-bottom{
-        border-bottom: #000 solid 2px;
-    }
-    #homepage{
-        text-align: center;
-        text-decoration: solid;
-    }
 
 
 }

@@ -10,8 +10,12 @@ page-home {
     #menu-title{
         color: #279b8d;
         position: absolute;
-        left: 100px;
+        left: 90px;
         top: 47px;
+    }
+
+    #main{
+        padding: 30px;
     }
 
     #notSelected{
@@ -29,6 +33,7 @@ page-home {
           color: #232323;
           
           transition: color 0.3s ease;
+          cursor: pointer;
         }
         
         
@@ -112,7 +117,7 @@ page-home {
         {
           position: absolute;
           width: 200px;
-          margin: -100px 0 0 -50px;
+          margin: -100px 0 0 -45px;
           padding: 50px;
           padding-top: 125px;
           height: 1700px;
@@ -131,8 +136,16 @@ page-home {
         #menu li
         {
           padding: 10px 0;
-          font-size: 22px;
+          font-size: 27px;
           margin-left: -32px;
+          margin-top: 10px;
+        }
+
+        #menu ul li{
+            list-style-type: none;
+            margin-bottom: -20px;
+            font-size: 18px;
+            margin-left: -5px;
         }
         
         #menuToggle input:checked ~ ul

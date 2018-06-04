@@ -26,12 +26,27 @@
           but hey, it's pure CSS magic.
           -->
           <ul id="menu">
-            <h2 id="menu-title">Menu</h2>
-            <a href="#"><li>Home</li></a>
-            <a (click)="goToGebruikers()"><li>Klanten</li></a>
+            <h1 id="menu-title">Menu</h1>
+            <li>
+                <a>Home</a>
+                 <ul>
+                     <li><a href="#">Info</a></li>
+                     <li><a href="#">Overzicht</a></li>
+                 </ul>
+             </li>
+             <li>
+                <a (click)="goToGebruikers()">Klanten</a>
+                 <ul>
+                     <li><a href="#">Info</a></li>
+                     <li><a href="#">Overzicht</a></li>
+                 </ul>
+             </li>
+            
           </ul>
         </div>
       </nav>
+
+      <p id="main">Some home text<p>
 
   
 </ion-content>

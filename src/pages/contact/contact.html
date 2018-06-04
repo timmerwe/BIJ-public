@@ -1,8 +1,10 @@
 
+
 <ion-content>
 
     <nav role="navigation">
         <div id="menuToggle">
+          <h1 id="title">Klanten</h1>
           <!--
           A fake / hidden checkbox is used as click reciever,
           so you can use the :checked selector on it.
@@ -24,20 +26,29 @@
           but hey, it's pure CSS magic.
           -->
           <ul id="menu">
-            <a (click)="goToHome()"><li>Home</li></a>
-            <a ><li>Klanten</li></a>
+            <h1 id="menu-title">Menu</h1>
+            <li>
+                <a (click)="goToHome()">Home</a>
+                 <ul>
+                     <li><a href="#">Info</a></li>
+                     <li><a href="#">Overzicht</a></li>
+                 </ul>
+             </li>
+             <li>
+                <a>Klanten</a>
+                 <ul>
+                     <li><a href="#">Info</a></li>
+                     <li><a href="#">Overzicht</a></li>
+                 </ul>
+             </li>
+            
           </ul>
         </div>
       </nav>
 
+      <p id="main">Some home text<p>
 
-    <button id="welkom">
-    </button>
-        <div id="homepage">
-            hallo even wat text hier neerzetten
-        </div>
   
 </ion-content>
-
 
 
