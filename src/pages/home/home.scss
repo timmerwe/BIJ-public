@@ -1,5 +1,19 @@
 page-home {
 
+    #title{
+        color: #279b8d;
+        position: absolute;
+        left: 100px;
+        top: 5px;
+    }
+
+    #menu-title{
+        color: #279b8d;
+        position: absolute;
+        left: 100px;
+        top: 47px;
+    }
+
     #notSelected{
         color: rgb(153, 153, 153);
     }
@@ -8,27 +22,6 @@ page-home {
         color: #279b8d;
     }
     
-    
-
-    #homepage{
-        border: 2px solid #000;
-        margin: -2.5px 12%;
-        padding: 2%;
-        padding-bottom: 200px;
-    }
-    
-    #welkom{
-        width: 170px;
-        position: relative;
-        height: 50px;
-        margin-left: 12%;
-        margin-top: 180px;
-        border: #000 solid 2px;
-        font-size: 2em;
-        color: #279b8d;
-        font-style: italic;
-        border-bottom: rgb(240, 239, 239) solid 2px;
-    }
 
     a
         {
@@ -118,7 +111,7 @@ page-home {
         #menu
         {
           position: absolute;
-          width: 20px;
+          width: 200px;
           margin: -100px 0 0 -50px;
           padding: 50px;
           padding-top: 125px;
@@ -139,7 +132,6 @@ page-home {
         {
           padding: 10px 0;
           font-size: 22px;
-          display: inline-block;
           margin-left: -32px;
         }
         
