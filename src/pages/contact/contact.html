@@ -1,48 +1,42 @@
 
-<ion-content padding>
-    <div id="nav">
-        <button id="notSelected" (click)="goToHome()">
-            Home
-          </button>
-          <button  id="selected" >
-            Gebruikers
-          </button>
-          <button  id="notSelected" (click)="goToKalender()">
-            Kalender
-          </button>
+<ion-content>
+
+    <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox" />
+          
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          <ul id="menu">
+            <a (click)="goToHome()"><li>Home</li></a>
+            <a ><li>Klanten</li></a>
+          </ul>
         </div>
-
-        <button  id="algemeen" class="border-bottom" onclick="changeInfo()">
-            Algemeen
-          </button>
-          <button id="overzicht" class="noBorder-bottom" onclick="changeInfo2()">
-              Overzicht
-            </button>
-      <div id="main-info">
-          <p>
-            Uitleg over hoe leerkrachten en ouders/verzorgers de APP kunnen downloaden en gebruiken. Dit willen we doen d.m.v. 2 codes. 1 t.b.v. leerkrachten (interne gebruikers) en 1 t.b.v. ouders/verzorgers (externe gebruikers)
-            <br/>            
-            <br/>
-
-            CODE t.b.v. Leerkrachten : 			<b>LK12345</b>
-            <br/>
-            <br/>
+      </nav>
 
 
-            CODE t.b.v. Ouders/Verzorgers :		<b>OU12345</b>
-            <br/>
-            <br/>
-
-
-            Iedereen kan de BIJ! App downloaden en gebruiker op zijn/haar smartphone, echter met de bovenstaande CODE's krijgen gebruikers toegang tot uw school. Wees zorgvuldig bij het verstrekken van deze codes! 
-            <br/>
-            <br/>
-            <br/>
-
-
-            Onder "Overzicht" vindt u alle gebruikers die op dit moment toegang hebben tot 1 of meerdere onderdelen binnen uw school.
-            </p>
-      </div>
+    <button id="welkom">
+    </button>
+        <div id="homepage">
+            hallo even wat text hier neerzetten
+        </div>
+  
 </ion-content>
 
 

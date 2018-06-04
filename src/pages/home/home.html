@@ -1,21 +1,35 @@
 
 
-<ion-content padding (ready)="getUserlevel()">
-    <div id="nav">
-    <button id="selected" >
-        Home
-      </button>
-      <button  id="notSelected" (click)="goToGebruikers()">
-        Gebruikers
-      </button>
-      <button  id="notSelected" (click)="goToKalender()">
-        Kalender
-      </button>
+<ion-content>
 
-      <button  id="notSelected" (click)="logOut()">
-          log uit
-        </button>
-    </div>
+    <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox" />
+          
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          <ul id="menu">
+            <a href="#"><li>Home</li></a>
+            <a (click)="goToGebruikers()"><li>Klanten</li></a>
+          </ul>
+        </div>
+      </nav>
 
 
     <button id="welkom">
