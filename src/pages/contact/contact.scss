@@ -14,9 +14,9 @@ page-contact {
         top: 47px;
     }
 
-    #main{
-        padding: 30px;
-    }
+        #addButton{
+          
+        }
 
     #notSelected{
         color: rgb(153, 153, 153);
@@ -152,6 +152,17 @@ page-contact {
         {
           transform: none;
         }
+        .lijst{
+          margin-left: 50px;
+          
+          }
+        #addButton{
+          margin-left: 380px;
+          margin-bottom: 5%;
+                    
+        }
+     
+
 
 
 }
