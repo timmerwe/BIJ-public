@@ -6,6 +6,7 @@ import * as firebase from 'firebase'
 
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
+import { Signup } from '../signup/signup';
 
 
 
@@ -36,6 +37,10 @@ goToKalender(): void {
   this.navCtrl.setRoot(AboutPage);
 }
 
+goToAddKlant(): void {
+  this.navCtrl.setRoot(Signup);
+}
+
  getUserlevel() {
   var userId = firebase.auth().currentUser.uid;
    firebase.database().ref('/userProfile/' + userId).once('value').then(function(snapshot) {
@@ -43,6 +48,8 @@ goToKalender(): void {
     console.log(userlevel);
   })
 }
+
+
 
   
 }

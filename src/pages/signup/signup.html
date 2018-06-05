@@ -14,7 +14,53 @@
 
 
 <ion-content padding>
-     <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>
+     <form [formGroup]="signupForm" (submit)="signupUser()">
+
+      <ion-item>
+      <ion-label stacked>Naam School</ion-label>
+      <ion-input #school formControlName="school" id="school" type="text" placeholder="School naam">
+      </ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-label stacked>Adres</ion-label>
+      <ion-input #adres formControlName="adres" type="text" placeholder="Adres">
+      </ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-label stacked>Postcode</ion-label>
+      <ion-input #postcode formControlName="postcode" type="text" placeholder="postcode">
+      </ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-label stacked>Plaats</ion-label>
+      <ion-input #plaats formControlName="plaats" type="text" placeholder="Plaats">
+      </ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-label stacked>Contactpersoon</ion-label>
+      <ion-input #contactpersoon formControlName="contactpersoon" type="text" placeholder="Contactpersoon">
+      </ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-label stacked>Telefoon</ion-label>
+      <ion-input #telefoon formControlName="telefoon" type="text" placeholder="Telefoon">
+      </ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input #email formControlName="contactEmail" type="text" placeholder="Email">
+      </ion-input>
+      </ion-item>
+
+
+
+
 
     <ion-item>
       <ion-label stacked>Email</ion-label>
@@ -22,21 +68,13 @@
         [class.invalid]="!signupForm.controls.email.valid && signupForm.controls.email.dirty">
         </ion-input>
     </ion-item>
-    <ion-item class="error-message" 
-      *ngIf="!signupForm.controls.email.valid  && signupForm.controls.email.dirty">
-      <p>Please enter a valid email.</p>
-    </ion-item>
 
     <ion-item>
       <ion-label stacked>Password</ion-label>
       <ion-input #password formControlName="password" type="password" placeholder="Your password" 
         [class.invalid]="!signupForm.controls.password.valid && signupForm.controls.password.dirty">
         </ion-input>
-    </ion-item>
-    <ion-item class="error-message" 
-      *ngIf="!signupForm.controls.password.valid  && signupForm.controls.password.dirty">
-      <p>Your password needs more than 6 characters.</p>
-    </ion-item>
+      </ion-item>
 
     <button ion-button block type="submit">
       Create an Account
