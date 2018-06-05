@@ -136,16 +136,17 @@ page-home {
         #menu li
         {
           padding: 10px 0;
-          font-size: 27px;
+          font-size: 24px;
           margin-left: -32px;
           margin-top: 10px;
         }
 
         #menu ul li{
             list-style-type: none;
-            margin-bottom: -20px;
+            margin-top: -5px;
+            margin-bottom: -15px;
             font-size: 18px;
-            margin-left: -5px;
+            margin-left: -18px;
         }
         
         #menuToggle input:checked ~ ul

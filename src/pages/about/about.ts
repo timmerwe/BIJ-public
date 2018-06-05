@@ -20,4 +20,6 @@ export class AboutPage {
 goToGebruikers(): void {
   this.navCtrl.setRoot(ContactPage);
 }
+
+
 }

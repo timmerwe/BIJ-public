@@ -30,10 +30,6 @@
             <h1 id="menu-title">Menu</h1>
             <li>
                 <a (click)="goToHome()">Home</a>
-                 <ul>
-                     <li><a href="#">Info</a></li>
-                     <li><a href="#">Overzicht</a></li>
-                 </ul>
              </li>
              <li>
                 <a>Klanten</a>
@@ -42,27 +38,18 @@
                      <li><a href="#">Overzicht</a></li>
                  </ul>
              </li>
+             <li>
+                <a (click)="logOut()">Log uit</a>
+             </li>
             
           </ul>
         </div>
       </nav>
 
-      <div class="lijst">
-            <p>School 1</p>
-            <p>School 2</p>
-            <p>School 3</p>
-            <p>School 4</p>
-            <p>School 5</p>
-            <p>School 6</p>
-            <p>School 7</p>
-            <p>School 8</p>
-            <p>School 9</p>
-            <p>School 10</p>
-            <p>School 11</p>
-            <p>School 12</p>
-
+      <div id="lijst">
+            
           </div>
-    <button id="addButton"class="w3-button w3-xlarge w3-circle w3-teal">+</button>
+          <button ion-button  id="addButton" (click)="goToAddKlant()">Klant toevoegen</button>
 
 
 

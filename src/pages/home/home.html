@@ -29,10 +29,6 @@
             <h1 id="menu-title">Menu</h1>
             <li>
                 <a>Home</a>
-                 <ul>
-                     <li><a href="#">Info</a></li>
-                     <li><a href="#">Overzicht</a></li>
-                 </ul>
              </li>
              <li>
                 <a (click)="goToGebruikers()">Klanten</a>
@@ -41,20 +37,15 @@
                      <li><a href="#">Overzicht</a></li>
                  </ul>
              </li>
+             <li>
+                <a (click)="logOut()" >Log uit</a>
+             </li>
             
           </ul>
         </div>
       </nav>
 
       <p id="main">Some home text<p>
-
-          <button  type="submit" id="login-knop" (click)="logOut()">
-              Log out
-            </button>
-
-            <button  type="submit" id="login-knop" (click)="goToAddKlant()">
-                Add customer
-              </button>
 
   
 </ion-content>
