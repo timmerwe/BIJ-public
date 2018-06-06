@@ -6,6 +6,8 @@ import { AuthData } from '../../providers/auth-data';
 import { EmailValidator } from '../../validators/email';
 import {HomePage}from'../home/home';
 import * as firebase from 'firebase'
+import { Login } from '../login/login';
+import { ContactPage } from '../contact/contact';
 
 
 /**
@@ -54,6 +56,20 @@ export class Signup {
     alert(){
         var user = firebase.auth().currentUser;
         console.log(firebase.auth().currentUser.email);
+    }
+
+    logOut() {
+        this.authData.logoutUser().then(() => {
+            this.nav.setRoot(Login);
+        });
+    }
+
+    goToGebruikers(): void {
+        this.nav.setRoot(ContactPage);
+    }
+
+    goToHome(): void {
+        this.nav.setRoot(HomePage);
     }
 
     
