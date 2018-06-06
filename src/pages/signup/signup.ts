@@ -8,6 +8,7 @@ import {HomePage}from'../home/home';
 import * as firebase from 'firebase'
 import { Login } from '../login/login';
 import { ContactPage } from '../contact/contact';
+import { SchoolHomePage } from '../school-home/school-home';
 
 
 /**
@@ -72,6 +73,8 @@ export class Signup {
         this.nav.setRoot(HomePage);
     }
 
+
+
     
     signupUser() {
         if (!this.signupForm.valid) {
@@ -80,7 +83,7 @@ export class Signup {
             this.authData.signupUser(this.signupForm.value.email, this.signupForm.value.password, this.signupForm.value.school, this.signupForm.value.adres, this.signupForm.value.postcode, this.signupForm.value.plaats, this.signupForm.value.contactpersoon, this.signupForm.value.telefoon, this.signupForm.value.contactEmail, '_' + Math.random().toString(36).substr(2, 9), new Date().toUTCString(), firebase.auth().currentUser.email)
                 .then(() => {
                     this.loading.dismiss().then(() => {
-                        this.nav.setRoot(HomePage);
+                        this.nav.setRoot(ContactPage);
                     });
                 }, (error) => {
                     this.loading.dismiss().then(() => {

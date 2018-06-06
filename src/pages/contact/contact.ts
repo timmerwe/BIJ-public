@@ -13,27 +13,22 @@ import * as firebase from 'firebase';
   selector: 'page-contact',
   templateUrl: 'contact.html'
 })
+
+
 export class ContactPage {
   
   constructor(public navCtrl: NavController, public authData: AuthData) {
     this.loadCompanies()
+
   }
+
+  
   goToHome(): void {
     this.navCtrl.setRoot(HomePage);
 }
 
 goToKalender(): void {
   this.navCtrl.setRoot(AboutPage);
-}
-
-loadAlgemeen(): void {
-  var text = document.getElementById("main-info");
-  text.insertAdjacentHTML('afterbegin', '<div class="two">two</div>');
-}
-
-loadOverzicht(): void {
-  var text = document.getElementById("main-info");
-  text.insertAdjacentHTML('afterbegin', '<div class="two">two</div>');
 }
 
 goToAddKlant(): void {
@@ -64,9 +59,14 @@ loadCompanies(){
       var info = companies.push(snap.val().school); //or snap.val().name if you just want the name and not the whole object
       console.log(companies);
       var text = document.getElementById("lijst");
-      text.insertAdjacentHTML('afterbegin', '<p>' + snap.val().school + '</p>');
+      text.insertAdjacentHTML('afterbegin', '<div tabindex="0" class="onclick-menu">'+ snap.val().school +'<ul class="onclick-menu-content"><li>Adress: '+ snap.val().adres +'</li><li>Plaats: '+ snap.val().plaats +'</li><li>Postcode: '+ snap.val().postcode +'</li><li>Nummer: '+ snap.val().telefoon +'</li><li>Contactpersoon: '+ snap.val().contactpersoon +'</li><li>Gemaakt door: '+ snap.val().created_by +'</li><li>Datum van toevoegen: '+ snap.val().created_on +'</li></ul></div><br>');
       return false;
     });
   });
+ }
+
+ companyClick(){
+  var hoi = document.getElementById("aaa").getAttribute("value");
+  console.log(hoi);
  }
 }

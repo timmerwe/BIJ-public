@@ -1,5 +1,4 @@
-page-contact {
-
+page-school-home {
     #title{
         color: #279b8d;
         position: absolute;
@@ -14,9 +13,10 @@ page-contact {
         top: 47px;
     }
 
-        #addButton{
-          
-        }
+    #main{
+        margin-top: 100px;
+        padding: 30px;
+    }
 
     #notSelected{
         color: rgb(153, 153, 153);
@@ -152,54 +152,6 @@ page-contact {
         #menuToggle input:checked ~ ul
         {
           transform: none;
-        }
-
-        #lijst{
-          margin-left: 50px;
-          margin-top: 40px;
-          
-          }
-        #addButton{
-            font-size: 0.8em;
-            color: #279b8d;
-            background-color: #dddddd;
-                    
-        }
-     
-
-        .onclick-menu {
-            position: relative;
-            display: inline-block;
-        }
-
-        .onclick-menu:focus {
-            /* clicking on label should toggle the menu */
-            pointer-events: none;
-        }
-        .onclick-menu:focus .onclick-menu-content {
-            /*  opacity is 1 in opened state (see below) */
-            opacity: 1;
-            visibility: visible;
-            height: 220px;
-            font-size: 0.8em;
-        
-            /* don't let pointer-events affect descendant elements */
-            pointer-events: auto;
-        }
-        .onclick-menu-content {
-            position: relative;
-            z-index: 1;
-            height: 1px;
-        
-            /* use opacity to fake immediate toggle */
-            opacity: 0;
-            overflow: hidden;
-            visibility: hidden;
-            transition: visibility 0.5s;
-        }
-
-        .onclick-menu-content button{
-            background-color: #ffffff;
         }
 
 }

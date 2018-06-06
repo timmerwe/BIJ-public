@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController,
     AlertController } from 'ionic-angular';
 import { FormBuilder, Validators } from '@angular/forms';
+import * as firebase from 'firebase'
 
 import { EmailValidator } from '../../validators/email';
 import { AuthData } from '../../providers/auth-data';
@@ -9,6 +10,7 @@ import {HomePage}from'../home/home';
 
 import { ResetPassword } from '../reset-password/reset-password';
 import { Signup } from '../signup/signup';
+import { SchoolHomePage } from '../school-home/school-home';
 /**
  * Generated class for the Login page.
  *
@@ -36,7 +38,11 @@ export class Login {
             password: ['', Validators.compose([Validators.minLength(6), Validators.required])]
         });
 
+        
+
     }
+
+    
 
     
     loginUser(): void {
@@ -44,13 +50,13 @@ export class Login {
             console.log(this.loginForm.value);
         } else {
             this.authData.loginUser(this.loginForm.value.email, this.loginForm.value.password).then(authData => {
-                this.loading.dismiss().then(() => {
+                this.loading.dismiss().then(() => () => {
                     this.nav.setRoot(HomePage);
                 });
-            }, error => {
+            }, log => {
                 this.loading.dismiss().then(() => {
                     let alert = this.alertCtrl.create({
-                        message: error.message,
+                        message: log.message,
                         buttons: [
                             {
                                 text: "Ok",

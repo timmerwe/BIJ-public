@@ -7,6 +7,7 @@ import * as firebase from 'firebase'
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 import { Signup } from '../signup/signup';
+import { SchoolHomePage } from '../school-home/school-home';
 
 
 
@@ -15,11 +16,30 @@ import { Signup } from '../signup/signup';
   templateUrl: 'home.html'
 })
 
+
 export class HomePage {
   
 
     constructor(public navCtrl: NavController, public authData: AuthData) {
-  }
+      var user = firebase.auth().currentUser;
+      if(user){
+        var userId = firebase.auth().currentUser.uid;
+        firebase.database().ref('/users/' + userId).once('value').then((snapshot) => {
+        var userlevel = (snapshot.val() && snapshot.val().userlevel)
+        console.log(userlevel);
+        if(userlevel == 1){
+          
+            
+        
+        } else {
+          this.navCtrl.setRoot(SchoolHomePage);
+        }
+      });
+    };
+
+     
+
+}
 
 
 
@@ -29,7 +49,7 @@ export class HomePage {
       });
   }
 
-  goToGebruikers(): void {
+  goToKlanten(): void {
     this.navCtrl.setRoot(ContactPage);
 }
 
@@ -39,14 +59,6 @@ goToKalender(): void {
 
 goToAddKlant(): void {
   this.navCtrl.setRoot(Signup);
-}
-
- getUserlevel() {
-  var userId = firebase.auth().currentUser.uid;
-   firebase.database().ref('/userProfile/' + userId).once('value').then(function(snapshot) {
-    var userlevel = (snapshot.val() && snapshot.val().userlevel) || 'Anonymous';
-    console.log(userlevel);
-  })
 }
 
 

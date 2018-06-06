@@ -12,6 +12,7 @@ import { Login } from '../pages/login/login';
 
 import {ResetPassword}from '../pages/reset-password/reset-password';
 import {Signup} from '../pages/signup/signup';
+import { SchoolHomePage } from '../pages/school-home/school-home';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -29,7 +30,8 @@ import { AuthData } from '../providers/auth-data';
       TabsPage,
       Login,
       ResetPassword,
-      Signup
+      Signup,
+      SchoolHomePage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { AuthData } from '../providers/auth-data';
       TabsPage,
       Login,
       ResetPassword,
-      Signup
+      Signup,
+      SchoolHomePage
   ],
   providers: [
       AuthData,
