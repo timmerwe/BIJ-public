@@ -1,4 +1,4 @@
-page-school-gebruikers-info {
+page-school-evenementen-overzicht {
     #title{
         color: #279b8d;
         position: absolute;
@@ -152,9 +152,5 @@ page-school-gebruikers-info {
         #menuToggle input:checked ~ ul
         {
           transform: none;
-        }
-
-        .main{
-          padding: 20px;
         }
 }

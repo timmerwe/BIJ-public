@@ -9,6 +9,10 @@ import { ContactPage } from '../contact/contact';
 import { Signup } from '../signup/signup';
 import {SchoolGebruikersInfoPage} from '../school-gebruikers-info/school-gebruikers-info';
 import { UsersSingupPage } from '../users-singup/users-singup';
+import { SchoolHomePage } from '../school-home/school-home';
+import { SchoolEvenementenOverzichtPage } from '../school-evenementen-overzicht/school-evenementen-overzicht';
+import { SchoolEvenementenInfoPage } from '../school-evenementen-info/school-evenementen-info';
+
 
 
 
@@ -25,9 +29,11 @@ import { UsersSingupPage } from '../users-singup/users-singup';
 })
 export class SchoolGebruikersOverzichtPage {
 
+  SchoolHomePage = SchoolHomePage;
   SchoolGebruikersInfoPage = SchoolGebruikersInfoPage;
   SchoolGebruikersOverzichtPage = SchoolGebruikersOverzichtPage;
-  UsersSingupPage = UsersSingupPage;
+  SchoolEvenementenInfoPage = SchoolEvenementenInfoPage;
+  SchoolEvenementenOverzichtPage = SchoolEvenementenOverzichtPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public authData: AuthData) {
     this.loadUsers()
@@ -58,7 +64,7 @@ export class SchoolGebruikersOverzichtPage {
         var info = users.push(snap.val().emailadress); //or snap.val().name if you just want the name and not the whole object
         console.log(users);
         var text = document.getElementById("lijst");
-        text.insertAdjacentHTML('afterbegin', '<div tabindex="0" class="onclick-menu">'+ snap.val().emailadress +'<ul class="onclick-menu-content"><li>Userlevel: '+ snap.val().geverifieerd +'</li></ul></div><br>');
+        text.insertAdjacentHTML('afterbegin', '<div class="onclick-menu">Naam Gebruiker' + snap.val().rol +'<br/> '+snap.val().emailadress + snap.val().geverifieerd +'</div><br>');
         return false;
       });
     });

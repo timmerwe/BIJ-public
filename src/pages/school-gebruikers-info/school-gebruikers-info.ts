@@ -8,8 +8,9 @@ import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 import { Signup } from '../signup/signup';
 import {SchoolGebruikersOverzichtPage} from '../school-gebruikers-overzicht/school-gebruikers-overzicht';
-
-
+import { SchoolEvenementenOverzichtPage } from '../school-evenementen-overzicht/school-evenementen-overzicht';
+import { SchoolEvenementenInfoPage } from '../school-evenementen-info/school-evenementen-info';
+import { SchoolHomePage } from '../school-home/school-home';
 
 /**
  * Generated class for the SchoolGebruikersInfoPage page.
@@ -24,8 +25,11 @@ import {SchoolGebruikersOverzichtPage} from '../school-gebruikers-overzicht/scho
 })
 export class SchoolGebruikersInfoPage {
 
+  SchoolHomePage = SchoolHomePage;
   SchoolGebruikersInfoPage = SchoolGebruikersInfoPage;
   SchoolGebruikersOverzichtPage = SchoolGebruikersOverzichtPage;
+  SchoolEvenementenInfoPage = SchoolEvenementenInfoPage;
+  SchoolEvenementenOverzichtPage = SchoolEvenementenOverzichtPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public authData: AuthData) {
   }

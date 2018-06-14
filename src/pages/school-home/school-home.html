@@ -37,6 +37,13 @@
                      <li><a [navPush]="SchoolGebruikersOverzichtPage">Overzicht</a></li>
                  </ul>
              </li>
+             <li>
+              <a [navPush]="SchoolEvenementenInfoPage">Evenementen</a>
+               <ul>
+                   <li><a [navPush]="SchoolEvenementenInfoPage">Info</a></li>
+                   <li><a [navPush]="SchoolEvenementenOverzichtPage">Overzicht</a></li>
+               </ul>
+           </li>
              <div id=nav></div>
              <li>
                 <a (click)="logOut()" >Log uit</a>
@@ -45,7 +52,6 @@
           </ul>
         </div>
       </nav>
-
       <p id="main">Some home text for school-ADMIN!<p>
 
   

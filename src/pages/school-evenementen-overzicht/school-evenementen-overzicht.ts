@@ -7,24 +7,24 @@ import * as firebase from 'firebase'
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 import { Signup } from '../signup/signup';
-import {SchoolGebruikersInfoPage} from '../school-gebruikers-info/school-gebruikers-info';
 import {SchoolGebruikersOverzichtPage} from '../school-gebruikers-overzicht/school-gebruikers-overzicht';
-import { SchoolEvenementenOverzichtPage } from '../school-evenementen-overzicht/school-evenementen-overzicht';
+import { SchoolHomePage } from '../school-home/school-home';
 import { SchoolEvenementenInfoPage } from '../school-evenementen-info/school-evenementen-info';
+import {SchoolGebruikersInfoPage} from '../school-gebruikers-info/school-gebruikers-info';
 
 
 /**
- * Generated class for the SchoolHomePage page.
+ * Generated class for the SchoolEvenementenOverzichtPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @IonicPage()
 @Component({
-  selector: 'page-school-home',
-  templateUrl: 'school-home.html',
+  selector: 'page-school-evenementen-overzicht',
+  templateUrl: 'school-evenementen-overzicht.html',
 })
-export class SchoolHomePage {
+export class SchoolEvenementenOverzichtPage {
 
   SchoolHomePage = SchoolHomePage;
   SchoolGebruikersInfoPage = SchoolGebruikersInfoPage;
@@ -32,19 +32,11 @@ export class SchoolHomePage {
   SchoolEvenementenInfoPage = SchoolEvenementenInfoPage;
   SchoolEvenementenOverzichtPage = SchoolEvenementenOverzichtPage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public authData: AuthData) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  logOut() {
-    this.authData.logoutUser().then(() => {
-        this.navCtrl.setRoot(Login);
-    });
-
-    
-}
-
-goToInfo(): void {
-  this.navCtrl.setRoot(SchoolGebruikersInfoPage);
-}
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad SchoolEvenementenOverzichtPage');
+  }
 
 }
