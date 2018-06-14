@@ -7,23 +7,22 @@ import * as firebase from 'firebase'
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 import { Signup } from '../signup/signup';
-import {SchoolGebruikersInfoPage} from '../school-gebruikers-info/school-gebruikers-info';
 import {SchoolGebruikersOverzichtPage} from '../school-gebruikers-overzicht/school-gebruikers-overzicht';
 
 
 
 /**
- * Generated class for the SchoolHomePage page.
+ * Generated class for the SchoolGebruikersInfoPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @IonicPage()
 @Component({
-  selector: 'page-school-home',
-  templateUrl: 'school-home.html',
+  selector: 'page-school-gebruikers-info',
+  templateUrl: 'school-gebruikers-info.html',
 })
-export class SchoolHomePage {
+export class SchoolGebruikersInfoPage {
 
   SchoolGebruikersInfoPage = SchoolGebruikersInfoPage;
   SchoolGebruikersOverzichtPage = SchoolGebruikersOverzichtPage;
@@ -31,16 +30,14 @@ export class SchoolHomePage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public authData: AuthData) {
   }
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad SchoolGebruikersInfoPage');
+  }
+
   logOut() {
     this.authData.logoutUser().then(() => {
         this.navCtrl.setRoot(Login);
     });
-
-    
-}
-
-goToInfo(): void {
-  this.navCtrl.setRoot(SchoolGebruikersInfoPage);
-}
+  }
 
 }

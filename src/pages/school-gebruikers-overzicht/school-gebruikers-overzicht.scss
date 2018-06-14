@@ -1,5 +1,4 @@
-page-contact {
-
+page-school-gebruikers-overzicht {
     #title{
         color: #279b8d;
         position: absolute;
@@ -14,9 +13,10 @@ page-contact {
         top: 47px;
     }
 
-        #addButton{
-          
-        }
+    #main{
+        margin-top: 100px;
+        padding: 30px;
+    }
 
     #notSelected{
         color: rgb(153, 153, 153);
@@ -42,7 +42,6 @@ page-contact {
           display: block;
           position: relative;
           padding: 30px 40px 20px 40px;
-          margin-bottom: 30px;
           border-bottom: 6px #aaaaaa solid;
           background-color: #dddddd;
           
@@ -154,27 +153,4 @@ page-contact {
         {
           transform: none;
         }
-
-        #lijst{
-         
-          
-          }
-        #addButton{
-            font-size: 0.8em;
-            color: #279b8d;
-            background-color: #dddddd;
-                    
-        }
-     
-
-        .onclick-menu {
-            background-color: #ffffff;
-            margin-bottom: 5px;
-            border-bottom: #000 solid 2px;
-            width: 100%;
-            margin-top: 5px;
-            padding: 5px;
-        }
-
-
 }

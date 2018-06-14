@@ -62,6 +62,29 @@ export class AuthData {
     });
   }
 
+  signupUser2(email: string, password: string, leerling: string, code: string, rol: string): firebase.Promise<any> {
+    return firebase.auth().createUserWithEmailAndPassword(email, password).then((newUser) => {
+       // firebase.database().ref('/users').child(email).set({
+        //    firstName: "anonymous",
+         //   id:newUser.uid,
+       // });
+
+      
+
+    firebase.database().ref('/mobileUsers').child(newUser.uid).set({
+        email: email,
+        userlevel: "3",
+        leerling: leerling,
+        code: code,
+        rol: rol,
+        emailadress: email,
+        geverifieerd: "U unverified"
+
+
+    });
+  });
+}
+
 
 
   /**

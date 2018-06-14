@@ -59,7 +59,7 @@ loadCompanies(){
       var info = companies.push(snap.val().school); //or snap.val().name if you just want the name and not the whole object
       console.log(companies);
       var text = document.getElementById("lijst");
-      text.insertAdjacentHTML('afterbegin', '<div tabindex="0" class="onclick-menu">'+ snap.val().school +'<ul class="onclick-menu-content"><li>Adress: '+ snap.val().adres +'</li><li>Plaats: '+ snap.val().plaats +'</li><li>Postcode: '+ snap.val().postcode +'</li><li>Nummer: '+ snap.val().telefoon +'</li><li>Contactpersoon: '+ snap.val().contactpersoon +'</li><li>Gemaakt door: '+ snap.val().created_by +'</li><li>Datum van toevoegen: '+ snap.val().created_on +'</li></ul></div><br>');
+      text.insertAdjacentHTML('afterbegin', '<div tabindex="0" class="onclick-menu">'+ snap.val().school +' | '+ snap.val().adres +' &nbsp; &nbsp; ></div><br>');
       return false;
     });
   });

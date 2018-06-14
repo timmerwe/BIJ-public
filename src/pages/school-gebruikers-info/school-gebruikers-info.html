@@ -1,0 +1,46 @@
+<ion-content>
+  <nav role="navigation">
+    <div id="menuToggle">
+      <h1 id="title">Gebruikers-Info</h1>
+      <!--
+      A fake / hidden checkbox is used as click reciever,
+      so you can use the :checked selector on it.
+      -->
+      <input type="checkbox" />
+      
+      <!--
+      Some spans to act as a hamburger.
+      
+      They are acting like a real hamburger,
+      not that McDonalds stuff.
+      -->
+      <span></span>
+      <span></span>
+      <span></span>
+      
+      <!--
+      Too bad the menu has to be inside of the button
+      but hey, it's pure CSS magic.
+      -->
+      <ul id="menu">
+        <h1 id="menu-title">Menu</h1>
+        <li>
+            <a>Home</a>
+         </li>
+         <li>
+            <a [navPush]="SchoolGebruikersInfoPage">Gebruikers</a>
+             <ul>
+                 <li><a [navPush]="SchoolGebruikersInfoPage">Info</a></li>
+                 <li><a [navPush]="SchoolGebruikersOverzichtPage">Overzicht</a></li>
+             </ul>
+         </li>
+         <div id=nav></div>
+         <li>
+            <a (click)="logOut()" >Log uit</a>
+         </li>
+        
+      </ul>
+    </div>
+  </nav>
+
+</ion-content>

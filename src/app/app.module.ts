@@ -13,11 +13,15 @@ import { Login } from '../pages/login/login';
 import {ResetPassword}from '../pages/reset-password/reset-password';
 import {Signup} from '../pages/signup/signup';
 import { SchoolHomePage } from '../pages/school-home/school-home';
+import {SchoolGebruikersInfoPage} from '../pages/school-gebruikers-info/school-gebruikers-info';
+import {SchoolGebruikersOverzichtPage} from '../pages/school-gebruikers-overzicht/school-gebruikers-overzicht';
+import {UsersSingupPage} from '../pages/users-singup/users-singup';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AuthData } from '../providers/auth-data';
+
 
 
 
@@ -31,7 +35,10 @@ import { AuthData } from '../providers/auth-data';
       Login,
       ResetPassword,
       Signup,
-      SchoolHomePage
+      SchoolHomePage,
+      SchoolGebruikersInfoPage,
+      SchoolGebruikersOverzichtPage,
+      UsersSingupPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +54,10 @@ import { AuthData } from '../providers/auth-data';
       Login,
       ResetPassword,
       Signup,
-      SchoolHomePage
+      SchoolHomePage,
+      SchoolGebruikersInfoPage,
+      SchoolGebruikersOverzichtPage,
+      UsersSingupPage
   ],
   providers: [
       AuthData,
