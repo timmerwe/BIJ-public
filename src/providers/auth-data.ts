@@ -85,6 +85,21 @@ export class AuthData {
   });
 }
 
+maakEvent(type: string, omschrijving: string, datum: string, locatie: string, beheerder: string, id: string): firebase.Promise<any> {
+
+    
+
+ return firebase.database().ref('/event').child(id).set({
+    type: type,
+    omschrijving: omschrijving,
+    datum: datum,
+    locatie: locatie,
+    beheerder: beheerder
+
+
+  });
+}
+
 
 
   /**

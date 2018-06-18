@@ -18,6 +18,8 @@ import {SchoolGebruikersOverzichtPage} from '../pages/school-gebruikers-overzich
 import {UsersSingupPage} from '../pages/users-singup/users-singup';
 import {SchoolEvenementenInfoPage} from '../pages/school-evenementen-info/school-evenementen-info';
 import {SchoolEvenementenOverzichtPage} from '../pages/school-evenementen-overzicht/school-evenementen-overzicht';
+import {MaakEvenementPage} from '../pages/maak-evenement/maak-evenement';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -42,7 +44,8 @@ import { AuthData } from '../providers/auth-data';
       SchoolGebruikersOverzichtPage,
       UsersSingupPage,
       SchoolEvenementenInfoPage,
-      SchoolEvenementenOverzichtPage
+      SchoolEvenementenOverzichtPage,
+      MaakEvenementPage
   ],
   imports: [
     BrowserModule,
@@ -63,7 +66,8 @@ import { AuthData } from '../providers/auth-data';
       SchoolGebruikersOverzichtPage,
       UsersSingupPage,
       SchoolEvenementenInfoPage,
-      SchoolEvenementenOverzichtPage
+      SchoolEvenementenOverzichtPage,
+      MaakEvenementPage
   ],
   providers: [
       AuthData,

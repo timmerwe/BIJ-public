@@ -1,0 +1,54 @@
+<!--
+  Generated template for the MaakEvenementPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content>
+
+
+  <form [formGroup]="signupForm" (submit)="signupUser()">
+
+      <ion-item>
+          <ion-label>Type</ion-label>
+          <ion-select #type formControlName="type" id="type" type="text">
+            <ion-option value="Groep">Groep</ion-option>
+            <ion-option value="Evenement">Evenement</ion-option>
+          </ion-select>
+        </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Omschrijving</ion-label>
+        <ion-input #omschrijving formControlName="omschrijving" type="text" placeholder="Voer een omschrijving in..">
+          </ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label stacked>Datum</ion-label>
+        <ion-input #datum formControlName="datum" type="datum" placeholder="dd-mm-jjjj">
+          </ion-input>
+        </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Locatie</ion-label>
+        <ion-input #locatie formControlName="locatie" id="locatie" type="text" placeholder="Locatie is optioneel">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>Beheerder</ion-label>
+          <ion-select #beheerder formControlName="beheerder" id="beheerder" type="text">
+            <ion-option value="Tim van de Merwe">Tim van de Merwe</ion-option>
+            <ion-option value="Henk Smeijers">Henk Smeijers</ion-option>
+          </ion-select>
+        </ion-item>
+
+
+
+        
+<button ion-button block type="submit">
+  Creeër account
+</button>
+</form>
+
+</ion-content>

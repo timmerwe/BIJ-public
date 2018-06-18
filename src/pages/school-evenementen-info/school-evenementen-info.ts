@@ -32,11 +32,17 @@ export class SchoolEvenementenInfoPage {
   SchoolEvenementenInfoPage = SchoolEvenementenInfoPage;
   SchoolEvenementenOverzichtPage = SchoolEvenementenOverzichtPage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public authData: AuthData) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SchoolEvenementenInfoPage');
   }
 
+  logOut() {
+    this.authData.logoutUser().then(() => {
+        this.navCtrl.setRoot(Login);
+    });
+
+}
 }

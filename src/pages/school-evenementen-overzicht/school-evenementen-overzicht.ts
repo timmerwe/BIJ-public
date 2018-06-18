@@ -11,6 +11,7 @@ import {SchoolGebruikersOverzichtPage} from '../school-gebruikers-overzicht/scho
 import { SchoolHomePage } from '../school-home/school-home';
 import { SchoolEvenementenInfoPage } from '../school-evenementen-info/school-evenementen-info';
 import {SchoolGebruikersInfoPage} from '../school-gebruikers-info/school-gebruikers-info';
+import { MaakEvenementPage } from '../maak-evenement/maak-evenement';
 
 
 /**
@@ -32,11 +33,23 @@ export class SchoolEvenementenOverzichtPage {
   SchoolEvenementenInfoPage = SchoolEvenementenInfoPage;
   SchoolEvenementenOverzichtPage = SchoolEvenementenOverzichtPage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams, public authData: AuthData) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SchoolEvenementenOverzichtPage');
   }
+  logOut() {
+    this.authData.logoutUser().then(() => {
+        this.navCtrl.setRoot(Login);
+    });
+  
+}
 
+maakEvenement() {
+
+  this.navCtrl.setRoot(MaakEvenementPage);
+
+}
 }
