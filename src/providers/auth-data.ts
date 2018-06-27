@@ -85,6 +85,22 @@ export class AuthData {
   });
 }
 
+updateUser(email: string, leerling: string, rol: string): firebase.Promise<any> {
+
+    
+
+  return firebase.database().ref('/mobileUsers').child("7zndtTtNH8WsmbXbmMy8YiYxabF3").update({
+      email: email,
+      userlevel: "3",
+      leerling: leerling,
+      rol: rol,
+      emailadress: email,
+      geverifieerd: "U unverified"
+
+
+  });
+}
+
 maakEvent(type: string, omschrijving: string, datum: string, locatie: string, beheerder: string, id: string): firebase.Promise<any> {
 
     

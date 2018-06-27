@@ -12,6 +12,7 @@ import { UsersSingupPage } from '../users-singup/users-singup';
 import { SchoolHomePage } from '../school-home/school-home';
 import { SchoolEvenementenOverzichtPage } from '../school-evenementen-overzicht/school-evenementen-overzicht';
 import { SchoolEvenementenInfoPage } from '../school-evenementen-info/school-evenementen-info';
+import { EditUserPage } from '../edit-user/edit-user';
 
 
 
@@ -28,6 +29,9 @@ import { SchoolEvenementenInfoPage } from '../school-evenementen-info/school-eve
   templateUrl: 'school-gebruikers-overzicht.html',
 })
 export class SchoolGebruikersOverzichtPage {
+  
+
+ users: any = [];
 
   SchoolHomePage = SchoolHomePage;
   SchoolGebruikersInfoPage = SchoolGebruikersInfoPage;
@@ -51,7 +55,7 @@ export class SchoolGebruikersOverzichtPage {
     });
   }
 
-  users() {
+  createUser() {
 
         this.navCtrl.setRoot(UsersSingupPage);
 
@@ -59,15 +63,17 @@ export class SchoolGebruikersOverzichtPage {
 
   loadUsers(){
     firebase.database().ref('/mobileUsers/').once('value', (snapshot) => {
-      let users = [];
+      
       snapshot.forEach(snap => {
-        var info = users.push(snap.val().emailadress); //or snap.val().name if you just want the name and not the whole object
-        console.log(users);
-        var text = document.getElementById("lijst");
-        text.insertAdjacentHTML('afterbegin', '<div class="onclick-menu">Naam Gebruiker' + snap.val().rol +'<br/> '+snap.val().emailadress + snap.val().geverifieerd +'</div><br>');
+        this.users.push(snap.val());
+        console.log(this.users);
         return false;
       });
     });
+   }
+
+   goToEditPage(emailadress: string, code: string, rol: string, leerling: string, geverifieerd: string){
+     this.navCtrl.push(EditUserPage, {code: code, emailadress: emailadress, rol: rol, leerling: leerling, geverifieerd: geverifieerd});
    }
    
 

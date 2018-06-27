@@ -50,8 +50,12 @@
       </ul>
     </div>
   </nav>
-<button (click)="users()">make user</button>
-  <div id="lijst">
-            
-  </div>
+<button (click)="createUser()">make user</button>
+
+
+  <ion-list id="lijst">
+      <button  ion-item *ngFor="let user of this.users" (click)="goToEditPage(user.emailadress, user.code, user.rol, user.leerling, user.geverifieerd)">
+        <ion-label>Naam gebruiker: &nbsp;  {{user.rol}}  <br/> {{user.emailadress}}  &nbsp; &nbsp;{{user.geverifieerd}} </ion-label>
+      </button>  
+  </ion-list>
 </ion-content>

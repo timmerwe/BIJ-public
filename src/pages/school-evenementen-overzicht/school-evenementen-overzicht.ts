@@ -12,8 +12,8 @@ import { SchoolHomePage } from '../school-home/school-home';
 import { SchoolEvenementenInfoPage } from '../school-evenementen-info/school-evenementen-info';
 import {SchoolGebruikersInfoPage} from '../school-gebruikers-info/school-gebruikers-info';
 import { MaakEvenementPage } from '../maak-evenement/maak-evenement';
-
-
+import { EditUserPage } from '../edit-user/edit-user';
+import { EditEvenementPage } from '../edit-evenement/edit-evenement';
 /**
  * Generated class for the SchoolEvenementenOverzichtPage page.
  *
@@ -26,6 +26,8 @@ import { MaakEvenementPage } from '../maak-evenement/maak-evenement';
   templateUrl: 'school-evenementen-overzicht.html',
 })
 export class SchoolEvenementenOverzichtPage {
+  
+  evenementen: any = [];
 
   SchoolHomePage = SchoolHomePage;
   SchoolGebruikersInfoPage = SchoolGebruikersInfoPage;
@@ -35,6 +37,7 @@ export class SchoolEvenementenOverzichtPage {
 
   
   constructor(public navCtrl: NavController, public navParams: NavParams, public authData: AuthData) {
+  this.loadEvenementen();
   }
 
   ionViewDidLoad() {
@@ -52,4 +55,21 @@ maakEvenement() {
   this.navCtrl.setRoot(MaakEvenementPage);
 
 }
+
+loadEvenementen(){
+  firebase.database().ref('/event/').once('value', (snapshot) => {
+    
+    snapshot.forEach(snap => {
+       this.evenementen.push(snap.val());
+      return false;
+    });
+  });
+ }
+
+ goToEditPage(omschrijving: string, datum: string, beheerder: string){
+  this.navCtrl.push(EditEvenementPage, {omschrijving: omschrijving, datum: datum, beheerder: beheerder});
 }
+
+}
+
+

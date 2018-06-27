@@ -25,7 +25,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AuthData } from '../providers/auth-data';
-
+import { EditUserPage } from '../pages/edit-user/edit-user';
+import { EditEvenementPage } from '../pages/edit-evenement/edit-evenement';
 
 
 
@@ -35,17 +36,19 @@ import { AuthData } from '../providers/auth-data';
     AboutPage,
     ContactPage,
     HomePage,
-      TabsPage,
-      Login,
-      ResetPassword,
-      Signup,
-      SchoolHomePage,
-      SchoolGebruikersInfoPage,
-      SchoolGebruikersOverzichtPage,
-      UsersSingupPage,
-      SchoolEvenementenInfoPage,
-      SchoolEvenementenOverzichtPage,
-      MaakEvenementPage
+    TabsPage,
+    Login,
+    EditUserPage,
+    ResetPassword,
+    Signup,
+    SchoolHomePage,
+    SchoolGebruikersInfoPage,
+    SchoolGebruikersOverzichtPage,
+    UsersSingupPage,
+    SchoolEvenementenInfoPage,
+    SchoolEvenementenOverzichtPage,
+    MaakEvenementPage,
+    EditEvenementPage
   ],
   imports: [
     BrowserModule,
@@ -61,13 +64,15 @@ import { AuthData } from '../providers/auth-data';
       Login,
       ResetPassword,
       Signup,
+      EditUserPage,
       SchoolHomePage,
       SchoolGebruikersInfoPage,
       SchoolGebruikersOverzichtPage,
       UsersSingupPage,
       SchoolEvenementenInfoPage,
       SchoolEvenementenOverzichtPage,
-      MaakEvenementPage
+      MaakEvenementPage,
+      EditEvenementPage
   ],
   providers: [
       AuthData,

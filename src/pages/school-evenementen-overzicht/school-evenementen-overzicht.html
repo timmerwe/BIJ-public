@@ -51,7 +51,9 @@
     </div>
   </nav>
 <button (click)="maakEvenement()">maak Evenement</button>
-  <div id="lijst">
-            
-  </div>
+<ion-list id="lijst">
+  <button  ion-item *ngFor="let evenement of this.evenementen" (click)="goToEditPage(evenement.omschrijving, evenement.datum, evenement.beheerder)">
+    <ion-label>  {{evenement.omschrijving}}  <br/> {{evenement.datum}}  &nbsp; &nbsp;{{evenement.beheerder}} </ion-label>
+  </button>  
+</ion-list>
 </ion-content>
